@@ -3,6 +3,8 @@
 - Ex 2 - Using `mut` keyword
 - Ex 3 - Scoping
 
+
+
 #### Project Structure
 ```project/
 |-- src/
@@ -12,5 +14,8 @@
 |       |-- ex_1.rs
 |       |-- ex_2.rs
 |       `-- ...
-
 ```
+
+
+#### Execute Program
+`cargo run`

@@ -1,4 +1,3 @@
-
 // Ex 1 UNUSED VARIABLES
 // Fix the error below with least amount of modification to the code
 pub fn unused_var() {
