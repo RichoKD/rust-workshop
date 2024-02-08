@@ -5,4 +5,5 @@ fn main() {
     exercises::ex_3::scope_fn();
     exercises::ex_4::shadow_fn();
     exercises::ex_4::shadow_fn_b();
+    exercises::ex_5::unused_var();
 }

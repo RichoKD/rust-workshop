@@ -15,7 +15,6 @@ pub fn shadow_fn() {
 
         println!("2nd x here is: {}", x); // prints 12
         assert_eq!(x, 12);
-
     }
 
     let x = 42;
@@ -24,23 +23,21 @@ pub fn shadow_fn() {
 }
 
 /**
- * 
-* Ex 4a
+ *
+* Ex 4b
 * Remove a line in the code to make it compile
- * 
+ *
  */
 pub fn shadow_fn_b() {
     let mut x: i32 = 1;
     x = 7;
     // Shadowing and re-binding
-    // let x = x; 
+    // let x = x;
     x += 3;
-
 
     let y = 4;
     // Shadowing
-    let y = "I can also be bound to text!"; 
+    let y = "I can also be bound to text!";
 
     println!("Success!");
 }
-
