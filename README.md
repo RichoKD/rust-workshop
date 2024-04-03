@@ -4,6 +4,7 @@
 - Ex 3 - Scoping
 - Ex 4 - Shadowing
 - Ex 5 - Unused variale
+- Ex 6 - Destructuring
 
 
 

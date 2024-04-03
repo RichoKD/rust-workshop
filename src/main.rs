@@ -6,4 +6,5 @@ fn main() {
     exercises::ex_4::shadow_fn();
     exercises::ex_4::shadow_fn_b();
     exercises::ex_5::unused_var();
+    exercises::ex_6::destructure();
 }
