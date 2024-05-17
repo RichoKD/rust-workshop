@@ -22,6 +22,6 @@ fn main() {
     // chars_bool_and_unit::ex_3::ex_3();
     // chars_bool_and_unit::ex_4::main();
     // chars_bool_and_unit::ex_5::main();
-    chars_bool_and_unit::ex_6::main();
-    // statements_and_expressions::ex_1::main(); // wip
+    // chars_bool_and_unit::ex_6::main();
+    statements_and_expressions::ex_1::main(); // wip
 }
