@@ -1,6 +1,7 @@
 mod chars_bool_and_unit;
 mod exercises;
 mod integers;
+mod statements_and_expressions;
 fn main() {
     // exercises::ex_1::unused_var();
     // exercises::ex_2::mutate_variable();
@@ -22,4 +23,5 @@ fn main() {
     // chars_bool_and_unit::ex_4::main();
     // chars_bool_and_unit::ex_5::main();
     chars_bool_and_unit::ex_6::main();
+    // statements_and_expressions::ex_1::main(); // wip
 }
