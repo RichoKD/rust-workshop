@@ -20,5 +20,6 @@ fn main() {
     // chars_bool_and_unit::ex_2::ex_2();
     // chars_bool_and_unit::ex_3::ex_3();
     // chars_bool_and_unit::ex_4::main();
-    chars_bool_and_unit::ex_5::main();
+    // chars_bool_and_unit::ex_5::main();
+    chars_bool_and_unit::ex_6::main();
 }
