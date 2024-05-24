@@ -29,5 +29,6 @@ fn main() {
     // statements_and_expressions::ex_3::main();
     //   functions::ex_1::main();
     // functions::ex_2::main();
-    functions::ex_3::main();
+    // functions::ex_3::main(); // this is intended to panic
+    functions::ex_4::main(); // wip
 }
