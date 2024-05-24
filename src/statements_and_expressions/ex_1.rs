@@ -5,11 +5,11 @@ pub fn main() {
         x += 2;
         x
     };
- 
- let result = v;
+
+    let result = v;
     assert_eq!(v, result);
     // let result: usize = size_of_val(&v);
     assert_eq!(v, v);
- 
+
     println!("ex_1 result: Success!");
- }
+}
