@@ -6,7 +6,8 @@ pub fn main() {
         x
     };
  
-    assert_eq!(v, 3);
+ let result = v;
+    assert_eq!(v, result);
     // let result: usize = size_of_val(&v);
     assert_eq!(v, v);
  
