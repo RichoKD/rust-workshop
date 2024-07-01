@@ -1,5 +1,6 @@
 mod chars_bool_and_unit;
 mod exercises;
+mod functions;
 mod integers;
 mod statements_and_expressions;
 fn main() {
@@ -22,6 +23,12 @@ fn main() {
     // chars_bool_and_unit::ex_3::ex_3();
     // chars_bool_and_unit::ex_4::main();
     // chars_bool_and_unit::ex_5::main();
-    chars_bool_and_unit::ex_6::main();
+    // chars_bool_and_unit::ex_6::main();
     // statements_and_expressions::ex_1::main(); // wip
+    // statements_and_expressions::ex_2::main();
+    // statements_and_expressions::ex_3::main();
+    //   functions::ex_1::main();
+    // functions::ex_2::main();
+    // functions::ex_3::main(); // this is intended to panic
+    functions::ex_4::main(); // wip
 }
