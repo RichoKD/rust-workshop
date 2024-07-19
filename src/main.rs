@@ -3,6 +3,7 @@ mod exercises;
 mod functions;
 mod integers;
 mod statements_and_expressions;
+mod ownership;
 fn main() {
     // exercises::ex_1::unused_var();
     // exercises::ex_2::mutate_variable();
@@ -30,5 +31,6 @@ fn main() {
     //   functions::ex_1::main();
     // functions::ex_2::main();
     // functions::ex_3::main(); // this is intended to panic
-    functions::ex_4::main(); // wip
+    // functions::ex_4::main(); // wip
+    ownership::ex_1::main();
 }
