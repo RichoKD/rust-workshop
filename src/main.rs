@@ -37,4 +37,6 @@ fn main() {
     // ownership::ex_3::main();
     // ownership::ex_4::main();
     // ownership::ex_5::main();
+    ownership::ex_8::main();
+    ownership::ex_9::main();
 }
