@@ -32,5 +32,9 @@ fn main() {
     // functions::ex_2::main();
     // functions::ex_3::main(); // this is intended to panic
     // functions::ex_4::main(); // wip
-    ownership::ex_1::main();
+    // ownership::ex_1::main();
+    // ownership::ex_2::main();
+    // ownership::ex_3::main();
+    // ownership::ex_4::main();
+    // ownership::ex_5::main();
 }
