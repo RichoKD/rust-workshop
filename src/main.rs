@@ -4,6 +4,7 @@ mod functions;
 mod integers;
 mod statements_and_expressions;
 mod ownership;
+mod referencing_and_borrowing;
 fn main() {
     // exercises::ex_1::unused_var();
     // exercises::ex_2::mutate_variable();
@@ -37,6 +38,19 @@ fn main() {
     // ownership::ex_3::main();
     // ownership::ex_4::main();
     // ownership::ex_5::main();
-    ownership::ex_8::main();
-    ownership::ex_9::main();
+    // ownership::ex_6::main();
+    // ownership::ex_7::main();
+    // ownership::ex_8::main();
+    // ownership::ex_9::main();
+    // referencing_and_borrowing::ex_1::main();
+    // referencing_and_borrowing::ex_2::main();
+    // referencing_and_borrowing::ex_3::main();
+    // referencing_and_borrowing::ex_4::main();
+    // referencing_and_borrowing::ex_5::main();
+    // referencing_and_borrowing::ex_6::main();
+    // referencing_and_borrowing::ex_7::main();
+    // referencing_and_borrowing::ex_8::main();
+    // referencing_and_borrowing::ex_9::main();
+    // referencing_and_borrowing::ex_10::main();
+    referencing_and_borrowing::ex_11::main();
 }
