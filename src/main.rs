@@ -1,10 +1,11 @@
 mod chars_bool_and_unit;
+mod compound_types;
 mod exercises;
 mod functions;
 mod integers;
-mod statements_and_expressions;
 mod ownership;
 mod referencing_and_borrowing;
+mod statements_and_expressions;
 fn main() {
     // exercises::ex_1::unused_var();
     // exercises::ex_2::mutate_variable();
@@ -52,5 +53,17 @@ fn main() {
     // referencing_and_borrowing::ex_8::main();
     // referencing_and_borrowing::ex_9::main();
     // referencing_and_borrowing::ex_10::main();
-    referencing_and_borrowing::ex_11::main();
+    // referencing_and_borrowing::ex_11::main();
+    compound_types::ex_1::main();
+    compound_types::ex_2::main();
+    compound_types::ex_3::main();
+    compound_types::ex_4::main();
+    compound_types::ex_5::main();
+    compound_types::ex_6::main();
+    compound_types::ex_7::main();
+    compound_types::ex_8::main();
+    compound_types::ex_9::main();
+    compound_types::ex_10::main();
+    compound_types::ex_11::main();
+    compound_types::ex_12::main();
 }
