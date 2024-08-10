@@ -6,6 +6,14 @@ mod integers;
 mod ownership;
 mod referencing_and_borrowing;
 mod statements_and_expressions;
+
+pub mod student_registry_project;
+
+use student_registry_project::{
+    types::basic_types::{Sex, Student, StudentRegistry},
+    utils::convert_to_string,
+};
+
 fn main() {
     // exercises::ex_1::unused_var();
     // exercises::ex_2::mutate_variable();
@@ -54,16 +62,31 @@ fn main() {
     // referencing_and_borrowing::ex_9::main();
     // referencing_and_borrowing::ex_10::main();
     // referencing_and_borrowing::ex_11::main();
-    compound_types::ex_1::main();
-    compound_types::ex_2::main();
-    compound_types::ex_3::main();
-    compound_types::ex_4::main();
-    compound_types::ex_5::main();
-    compound_types::ex_6::main();
-    compound_types::ex_7::main();
-    compound_types::ex_8::main();
-    compound_types::ex_9::main();
-    compound_types::ex_10::main();
-    compound_types::ex_11::main();
-    compound_types::ex_12::main();
+    // compound_types::ex_1::main();
+    // compound_types::ex_2::main();
+    // compound_types::ex_3::main();
+    // compound_types::ex_4::main();
+    // compound_types::ex_5::main();
+    // compound_types::ex_6::main();
+    // compound_types::ex_7::main();
+    // compound_types::ex_8::main();
+    // compound_types::ex_9::main();
+    // compound_types::ex_10::main();
+    // compound_types::ex_11::main();
+    // compound_types::ex_12::main();
+
+    // 09-08-2024 session
+    // Student Registry
+    let mut rust_cohort = StudentRegistry::new_session();
+    let stephanie = rust_cohort.register(
+        convert_to_string("Stephanie"),
+        convert_to_string("Nwankwo"),
+        20,
+        5.8,
+        Sex::Female,
+    );
+    // println!("stephanie as student: {:#?} ", stephanie);
+    // println!("stephanie as student: {stephanie:#?} ");
+    let st_1 = rust_cohort.get_student_by_id(0);
+    println!("returned student: {st_1:#?}");
 }
