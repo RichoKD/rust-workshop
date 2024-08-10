@@ -6,13 +6,11 @@ mod integers;
 mod ownership;
 mod referencing_and_borrowing;
 mod statements_and_expressions;
+mod student_registry_project;
 
-pub mod student_registry_project;
+// pub mod student_registry_project;
 
-use student_registry_project::{
-    types::basic_types::{Sex, Student, StudentRegistry},
-    utils::convert_to_string,
-};
+
 
 fn main() {
     // exercises::ex_1::unused_var();
@@ -74,19 +72,23 @@ fn main() {
     // compound_types::ex_10::main();
     // compound_types::ex_11::main();
     // compound_types::ex_12::main();
+    student_registry_project::ex_1::main();
 
     // 09-08-2024 session
     // Student Registry
-    let mut rust_cohort = StudentRegistry::new_session();
-    let stephanie = rust_cohort.register(
-        convert_to_string("Stephanie"),
-        convert_to_string("Nwankwo"),
-        20,
-        5.8,
-        Sex::Female,
-    );
-    // println!("stephanie as student: {:#?} ", stephanie);
-    // println!("stephanie as student: {stephanie:#?} ");
-    let st_1 = rust_cohort.get_student_by_id(0);
-    println!("returned student: {st_1:#?}");
+    // let mut rust_cohort = StudentRegistry::new_session();
+    // let stephanie = rust_cohort.register(
+    //     convert_to_string("Stephanie"),
+    //     convert_to_string("Nwankwo"),
+    //     20,
+    //     5.8,
+    //     Sex::Female,
+    // );
+    // // println!("stephanie as student: {:#?} ", stephanie);
+    // // println!("stephanie as student: {stephanie:#?} ");
+    // let st_1 = rust_cohort.get_student_by_id(0);
+    // println!("returned student: {st_1:#?}");
+
+    
 }
+
