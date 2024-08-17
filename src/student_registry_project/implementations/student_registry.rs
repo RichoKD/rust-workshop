@@ -11,7 +11,7 @@ impl StudentRegistry {
     }
 
     // add course
-    pub fn add_course(&mut self, _name: String, _capacity: u32) {
+    pub fn add_course(&mut self, _name: String, _capacity: u32) {         
         let course_id: u32 = self.course_registry.len() as u32 + 1;
         self.course_registry.push(Course {
             id: course_id,
@@ -48,7 +48,7 @@ impl StudentRegistry {
 
     // util function to get student by id
     pub fn get_student_by_id(&self, id: u32) -> Option<&Student> {
-        self.total_students.get(id as usize)
+        self.total_students.get(id as usize)  //////////////
     }
 
     // pub fn get_courses(&self) -> &Vec<Course> {
@@ -63,9 +63,9 @@ impl StudentRegistry {
         let student_index: usize = (student_id - 1).try_into().unwrap();
         let course_index: usize = (course_id - 1).try_into().unwrap();
 
-        // Check if the student is already enrolled in the course
-        if self.total_students[student_index].enrolled_course_ids.contains(&course_id) {
-            println!("Student is already enrolled in the course.");
+        // Check if the student exists
+        if student_index >= self.total_students.len() {
+            println!("Student not found.");
             return;
         }
 
@@ -75,11 +75,12 @@ impl StudentRegistry {
             return;
         }
 
-        // Check if the student exists
-        if student_index >= self.total_students.len() {
-            println!("Student not found.");
+        // Check if the student is already enrolled in the course
+        if self.total_students[student_index].enrolled_course_ids.contains(&course_id) {
+            println!("Student is already enrolled in the course.");
             return;
         }
+
 
         // Check if the course has available capacity
         if self.course_registry[course_index].enrolled_student_ids.len() < self.course_registry[course_index].capacity as usize {
