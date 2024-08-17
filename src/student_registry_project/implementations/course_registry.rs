@@ -1,4 +1,4 @@
-use std::collections::BTreeMap;
+use std::collections::HashMap;
 
 use crate::student_registry_project::{
     types::basic_types::{Course, CourseRegistry},
@@ -10,7 +10,7 @@ impl CourseRegistry {
     // static method to initializea a new CourseRegistry
     pub fn new() -> CourseRegistry {
         CourseRegistry {
-            courses: BTreeMap::new(),
+            courses: HashMap::new(),
             total_courses: 0,
         }
     }
@@ -40,7 +40,7 @@ impl Course {
         Course {
             id,
             name,
-            student_ids: Vec::new(),
+            student_ids: Vec::with_capacity(max_capacity as usize),
             max_capacity,
         }
     }
@@ -52,7 +52,7 @@ impl Course {
             return Err(convert_to_string("Course is full"));
         }
         // checks if the student is already registered for the course
-        let student = self.student_ids.iter().find(|&s| s == &student_id);
+        let student = self.student_ids.iter().find(|&s| *s == student_id);
 
         match student {
             // if student is already registered, returns an error

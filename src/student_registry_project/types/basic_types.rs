@@ -1,4 +1,4 @@
-use std::collections::BTreeMap;
+use std::collections::HashMap;
 
 #[derive(Debug, Clone)]
 pub struct Student {
@@ -24,7 +24,7 @@ pub struct StudentRegistry {
 
 #[derive(Debug, Clone)]
 pub struct CourseRegistry {
-    pub courses: BTreeMap<u32, Course>,
+    pub courses: HashMap<u32, Course>,
     pub total_courses: u32,
 }
 #[derive(Debug, Clone)]
