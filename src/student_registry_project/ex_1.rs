@@ -7,8 +7,6 @@ use crate::student_registry_project::utils::{ input_any, input_f32, input_u32, i
 fn get_courses(rust_cohort: &mut StudentRegistry) -> u32 {
     println!("{:#?}", rust_cohort.course_registry);
 
-    // print!("Enter course id: \n");
-    
     let course_id = input_u32("Enter course id: ");
    
     course_id
@@ -78,7 +76,6 @@ fn get_student_info() -> (String, String, u8, f32, Sex) {
 }
 
 fn create_course(rust_cohort: &mut StudentRegistry) {
-    // create course
     
     let course_name = input_any("Enter course name: ");
 
@@ -86,7 +83,6 @@ fn create_course(rust_cohort: &mut StudentRegistry) {
   
     rust_cohort.add_course(course_name, course_capacity);
 
-    // rust_cohort
 }
 
 pub fn main() {
