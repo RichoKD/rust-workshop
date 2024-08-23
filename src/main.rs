@@ -78,15 +78,73 @@ fn main() {
     // 09-08-2024 session
     // Student Registry
     let mut rust_cohort = StudentRegistry::new_session();
-    let stephanie = rust_cohort.register(
+    let _stephanie = rust_cohort.register(
         convert_to_string("Stephanie"),
         convert_to_string("Nwankwo"),
         20,
         5.8,
         Sex::Female,
     );
+
+    // registers a second student to the cohort
+    let _rico = rust_cohort.register(
+        convert_to_string("rico"),
+        convert_to_string("blockheader"),
+        22,
+        6.1,
+        Sex::Male,
+    );
     // println!("stephanie as student: {:#?} ", stephanie);
     // println!("stephanie as student: {stephanie:#?} ");
+
+    // student with id 0 is stephanie
     let st_1 = rust_cohort.get_student_by_id(0);
-    println!("returned student: {st_1:#?}");
+    println!("student with id 0 is: {st_1:#?} ");
+
+    // student with id 1 is rico
+    let st_2 = rust_cohort.get_student_by_id(1);
+    println!("student with id 1 is: {st_2:#?} ");
+    print!("\n\n");
+
+    // create course 1 with max capacity of 1 student
+    let course_1 = rust_cohort.add_course(convert_to_string("Introduction To Rust"), 1);
+
+    // create course 2 with max capacity of 3 students
+    let course_2 = rust_cohort.add_course(convert_to_string("Advance Cairo"), 3);
+
+    println!("course 1 is created with id: {course_1:#?}");
+    println!("course 2 is created with id: {course_2:#?}");
+    print!("\n\n");
+
+    // attempt to register stephanie for course 1
+    // stephanie student id is 0
+    let course_1_reg_result_1 = rust_cohort.register_student_for_course(course_1, 0);
+
+    // attempt to register rico for course 1
+    // rico student id is 0
+    // registration should return an error because course 1 has max capacity of 1 student
+    let course_1_reg_result_2 = rust_cohort.register_student_for_course(course_1, 1);
+
+    println!("stephanie registration result for course_1: {course_1_reg_result_1:#?}");
+    println!("rico registration result for course_2: {course_1_reg_result_2:#?}");
+    print!("\n\n");
+
+    // attempt to register stephanie for course 1
+    // stephanie student id is 0
+    // also test that student can register for more than 1 course
+    let course_2_reg_result_1 = rust_cohort.register_student_for_course(course_2, 0);
+
+    // attempt to register stephanie for course 1 twice
+    // stephanie student id is 0
+    // should fail as double registration are not allowed
+    let course_2_reg_result_2 = rust_cohort.register_student_for_course(course_2, 0);
+
+    // attempt to register rico for course 1
+    // rico student id is 0
+    // should return an Ok result since max capacity is not reached
+    let course_2_reg_result_3 = rust_cohort.register_student_for_course(course_2, 1);
+
+    println!("stephanie registration result for course_2: {course_2_reg_result_1:#?}");
+    println!("stephanie second registration result for course_2: {course_2_reg_result_2:#?}");
+    println!("rico registration result for course_2: {course_2_reg_result_3:#?}");
 }
