@@ -1,7 +1,7 @@
 use std::collections::HashMap;
 
 use crate::student_registry_project::{
-    types::basic_types::{Course, CourseRegistry},
+    models::basic_types::{Course, CourseRegistry},
     utils::convert_to_string,
 };
 

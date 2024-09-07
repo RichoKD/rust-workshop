@@ -1,4 +1,4 @@
-use crate::student_registry_project::types::basic_types::{
+use crate::student_registry_project::models::basic_types::{
     CourseRegistry, Sex, Student, StudentRegistry,
 };
 use crate::student_registry_project::utils::convert_to_string;

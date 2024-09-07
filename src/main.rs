@@ -10,7 +10,7 @@ mod statements_and_expressions;
 pub mod student_registry_project;
 
 use student_registry_project::{
-    types::basic_types::{Sex, Student, StudentRegistry},
+    models::basic_types::{Sex, Student, StudentRegistry},
     utils::convert_to_string,
 };
 

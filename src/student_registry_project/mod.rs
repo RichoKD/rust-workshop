@@ -1,3 +1,3 @@
 pub mod implementations;
-pub mod types;
+pub mod models;
 pub mod utils;
