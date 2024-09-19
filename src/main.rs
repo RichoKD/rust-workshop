@@ -10,11 +10,16 @@ mod statements_and_expressions;
 pub mod student_registry_project;
 
 use student_registry_project::{
-    models::basic_types::{Sex, Student, StudentRegistry},
+    // models::basic_types::{Sex, Student, StudentRegistry},
+    models::{admin_model::Admin, student_model::Student},
     utils::convert_to_string,
 };
 
 fn main() {
+
+
+
+
     // exercises::ex_1::unused_var();
     // exercises::ex_2::mutate_variable();
     // exercises::ex_3::scope_fn();

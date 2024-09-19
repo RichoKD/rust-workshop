@@ -22,11 +22,13 @@ pub async fn login(
     .await
     .map_err(|_| "Invalid email or password")?;
 
-    if verify_password(&user.password_hash, &payload.password) {
-        let token = create_jwt(user.id.to_string());
-        Ok(Json(token))
-    } else {
-        Err("Invalid email or password")
+    match verify_password(&user.password_hash, &payload.password) {
+        Ok(true) => {
+            let token = create_jwt(user.id.to_string());
+            Ok(Json(token))
+        }
+        Ok(false) => Err("Invalid email or password"),
+        Err(_) => Err("Error verifying password"),
     }
 }
 

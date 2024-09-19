@@ -11,3 +11,7 @@ pub async fn get_db_pool() -> PgPool {
         .await
         .expect("Failed to create pool")
 }
+
+pub async fn import_db_pool() -> PgPool {
+    get_db_pool().await
+}
