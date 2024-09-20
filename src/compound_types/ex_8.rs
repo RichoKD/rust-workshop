@@ -8,7 +8,6 @@
 //     println!("Success!");
 // }
 
-
 // Use two approaches to fix the error and without adding a new line
 pub fn main() {
     let s = "hello, world".to_string();

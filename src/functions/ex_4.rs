@@ -1,4 +1,3 @@
-
 pub fn main() {
     println!("Success!");
     // get_option(5);
@@ -13,7 +12,7 @@ pub fn main() {
 //             // TODO
 //         }
 //     };
-    
+
 //     // Rather than returning a None, we use a diverging function instead
 //     // never_return_fn()
 // }
@@ -22,7 +21,6 @@ pub fn main() {
 // fn never_return_fn() -> ! {
 //     // panic!();
 
-
 //    assert!(1==32, "invalid");
-    
+
 // }
