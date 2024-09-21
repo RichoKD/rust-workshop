@@ -1,4 +1,3 @@
-
 pub fn main() {
     let s = give_ownership();
     println!("{}", s);

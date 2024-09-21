@@ -21,5 +21,5 @@ pub fn main() {
 }
 
 fn greetings(s: &str) {
-    println!("{}",s)
+    println!("{}", s)
 }

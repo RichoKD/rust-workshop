@@ -9,15 +9,13 @@ pub fn main() {
     println!("Failed!");
 }
 
-
 fn never_return() -> ! {
-   panic!();
+    panic!();
     // Implement this function, don't modify the fn signatures
 }
 
-
 // integers:
-// u8 - 255 
+// u8 - 255
 fn sum(x: u8, y: u8) -> u8 {
     x + y
 }
@@ -32,4 +30,3 @@ mod tests {
         sum(255, 1);
     }
 }
-
