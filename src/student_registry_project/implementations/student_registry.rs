@@ -1,5 +1,8 @@
-use crate::student_registry_project::types::basic_types::{
-    Course, CourseRegistry, Sex, Student, StudentRegistry,
+use crate::student_registry_project::types::{
+    course::Course,
+    course_registry::CourseRegistry,
+    student::{Sex, Student},
+    student_registry::StudentRegistry,
 };
 
 impl StudentRegistry {

@@ -1,5 +1,5 @@
 use crate::student_registry_project::{
-    types::basic_types::{AttendanceStatus, AttendanceStruct},
+    types::attendance::{AttendanceStatus, AttendanceStruct},
     utils::{get_current_date, get_current_time},
 };
 

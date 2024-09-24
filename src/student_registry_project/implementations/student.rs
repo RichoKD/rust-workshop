@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 
-use crate::student_registry_project::types::basic_types::{Sex, Student};
+use crate::student_registry_project::types::student::{Sex, Student};
 
 impl Student {
     pub fn new(
