@@ -1,7 +1,7 @@
 use std::collections::HashMap;
 
 use crate::student_registry_project::{
-    types::basic_types::{AttendanceStruct, Course, Student},
+    types::{attendance::AttendanceStruct, course::Course, student::Student},
     utils::get_current_time,
 };
 
