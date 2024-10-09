@@ -1,13 +1,19 @@
-// use axum::http::{Request, Response, StatusCode};
-// use axum::response::IntoResponse;
-use axum::{routing::{post, get}, Json, Router};
-
-use reqwest::{
-    header::{HeaderMap, HeaderValue},
-    Client,
+use std::{
+    collections::HashMap,
+    sync::{Arc, Mutex},
 };
-// use crate::utils;
-use crate::types::basic_types::{ student_registry::StudentRegistry, course::Course, course_registry::CourseRegistry };
+
+use axum::{
+    routing::{get, post},
+    Router,
+};
+
+use crate::types::{course_registry::CourseRegistry, student_registry::StudentRegistry};
+
+use super::{
+    course::{create_course, view_course_registry},
+    student::register_student,
+};
 
 async fn say_gm() -> &'static str {
     "GM"
@@ -17,14 +23,22 @@ async fn hello_ab() -> &'static str {
     "AB"
 }
 
+fn shared_state() -> Arc<Mutex<StudentRegistry>> {
+    Arc::new(Mutex::new(StudentRegistry {
+        total_students: Vec::new(),
+        course_registry: CourseRegistry {
+            courses: HashMap::new(),
+            total_courses: 0,
+        },
+    }))
+}
 
 pub fn routes() -> Router {
-    // add CORS layer to allow any origin
-    // let cors = utils::cors_handler();
-
-    // integrate CORS to router
     Router::new()
         .route("/", get(say_gm))
         .route("/ab", get(hello_ab))
-        // .layer(cors)
+        .route("/register_student", post(register_student))
+        .route("/create_course", post(create_course))
+        .route("/course_registry", get(view_course_registry))
+        .with_state(shared_state())
 }

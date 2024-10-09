@@ -10,8 +10,8 @@ mod statements_and_expressions;
 pub mod student_registry_project;
 
 use student_registry_project::{
-    
-    types::{student::Sex, student_registry::StudentRegistry}, utils::convert_to_string
+    types::{student::Sex, student_registry::StudentRegistry},
+    utils::convert_to_string,
 };
 
 fn main() {
