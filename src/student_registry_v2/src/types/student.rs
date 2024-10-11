@@ -1,6 +1,8 @@
 use std::collections::HashMap;
 
-#[derive(Debug, Clone)]
+use serde::{Deserialize, Serialize};
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Student {
     pub first_name: String,
     pub last_name: String,
@@ -11,7 +13,7 @@ pub struct Student {
     pub enrolled_courses: HashMap<u32, String>,
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub enum Sex {
     Male,
     Female,

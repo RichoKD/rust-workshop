@@ -1,5 +1,7 @@
+use serde::{Deserialize, Serialize};
+
 // Attendance
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct AttendanceStruct {
     pub date: String,
     pub time_in: String,
@@ -7,7 +9,7 @@ pub struct AttendanceStruct {
     pub attendance_status: AttendanceStatus,
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub enum AttendanceStatus {
     Present,
     Absent,

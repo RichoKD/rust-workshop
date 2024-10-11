@@ -1,7 +1,6 @@
 use axum::Router;
 use tokio::net::TcpListener;
 mod routes;
-// pub mod utils;
 pub mod types;
 
 #[tokio::main]
